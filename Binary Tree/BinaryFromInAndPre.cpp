@@ -34,7 +34,7 @@ TreeNode* helper(vector<int>& inorder, vector<int>& preorder, int inStart, int i
       }
     
      int leftTreeSize = rootIndex - inStart;
-     int rightTreeSize = leftTreeSize+preStart+1; //adding 1 because first element is root in PreOrder, so we                                                         skip that first element by adding 1
+     int rightTreeSize = leftTreeSize+preStart+1; //adding 1 because first element is root in PreOrder, so we skip that first element by adding 1
     
      root->left = helper(inorder, preorder, inStart, rootIndex-1, preStart+1, leftTreeSize);
      root->right = helper(inorder, preorder, rootIndex+1, inEnd, rightTreeSize, preEnd);
